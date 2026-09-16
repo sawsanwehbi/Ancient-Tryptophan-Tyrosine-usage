@@ -28,8 +28,8 @@ library('geoR')
 Bacterial_supergroups <- c('CPR', 'PVC', 'FCB', 'Terrabacteria', 'Proteobacteria')
 Archaeal_supergroups <- c('Asgard', 'TACK', 'DPANN', 'Euryarchaeota')
 All_supergroups <- c(Bacterial_supergroups,Archaeal_supergroups)
-AA_properties <- read.csv('../Pfam Trees/AminoAcid_properties.csv', header = T)
-AncientPostLUCA <- read.csv('../Tryptophan paper/AncientPostLUCA.csv', header = T)
+AA_properties <- read.csv('AminoAcid_properties.csv', header = T)
+AncientPostLUCA <- read.csv('AncientPostLUCA.csv', header = T)
 
 # Read pfam and clan data which includes AA frequencies calculated with NQbac and NQarch
 PfamConAACNQbac <- read.csv('pfam_asr_aac_NQBac_0.4_0.35preLBCA',header=T)
