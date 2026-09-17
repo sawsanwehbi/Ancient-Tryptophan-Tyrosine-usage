@@ -24,6 +24,7 @@ library(scales)
 library(diagis)
 library("msa")
 library('geoR')
+library(forcats)
 
 Bacterial_supergroups <- c('CPR', 'PVC', 'FCB', 'Terrabacteria', 'Proteobacteria')
 Archaeal_supergroups <- c('Asgard', 'TACK', 'DPANN', 'Euryarchaeota')
@@ -309,10 +310,6 @@ DivLBCAclanratio_var <- (DivLBCAweightedse[-1]^2)/((LUCA_Clans_ConAAC)^2) +
   (LUCAweightedse[-1]^2)*((DivLBCA_ClanAAC)^2)/((LUCA_Clans_ConAAC)^4)
 DivLBCAclanratio_se <- sqrt(DivLBCAclanratio_var)
 DivLBCAclanratio_se <- DivLBCAclanratio_se[match(AA_properties$Letter,names(DivLBCAclanratio_se))]
-
-sqrt( (DivLBCAweightedse[-1]^2)/((DivLACA_ClanAAC)^2) +
-        (DivLACAweightedse[-1]^2)*((DivLBCA_ClanAAC)^2)/((DivLACA_ClanAAC)^4))
-DivLBCALACAusage
 
 RecentArcusage_var <- (RecentArchaeaweightedse[-1]^2)/((LUCA_Clans_ConAAC)^2) +
   (LUCAweightedse[-1]^2)*((RecentArchaea_Clans_ConAAC)^2)/((LUCA_Clans_ConAAC)^4)
